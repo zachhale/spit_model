@@ -3,11 +3,16 @@ SpitModel
 
 Spit Model spits out the attributes of a model and tries to be friendly with names of associated models defined w/ has_many relationships.
 
+Pretty much exclusively only useful for an admin area, this will add a helper method to your views that will spit out a table of column and attribute value. The smart thing this does is tries to print a nicer name for associations defined by foreign keys in the model you're spitting.
+
+You can send a single or array of regexps or strings to filter out attributes you dont want to show in the table if some are not worth spitting (for example you may not want to see the salts or tokens on a User model).
 
 Example
 =======
 
 <%= spit_model @user %>
+<%= spit_model @user, :except => /password|token|salt/ %>
+<%= spit_model @user, :except => %w(password password_confirmation) %>
 
 
 Copyright (c) 2009 Zach Hale, released under the MIT license
