@@ -1,4 +1,4 @@
-SpitModel
+Spit Model
 =========
 
 Spit Model spits out the attributes of a model and tries to be friendly with names of associated models defined w/ has_many relationships.
