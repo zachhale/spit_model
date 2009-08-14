@@ -1,0 +1,1 @@
+require 'spit_model'

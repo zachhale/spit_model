@@ -1,0 +1,13 @@
+SpitModel
+=========
+
+Spit Model spits out the attributes of a model and tries to be friendly with names of associated models defined w/ has_many relationships.
+
+
+Example
+=======
+
+<%= spit_model @user %>
+
+
+Copyright (c) 2009 Zach Hale, released under the MIT license
